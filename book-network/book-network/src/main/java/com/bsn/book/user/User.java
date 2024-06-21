@@ -1,6 +1,7 @@
 package com.bsn.book.user;
 
 import com.bsn.book.role.Role;
+
 import jakarta.persistence.*;
 import lombok.*;
 import org.springframework.data.annotation.CreatedDate;
@@ -92,7 +93,7 @@ public class User implements UserDetails, Principal {
         return enabled;
     }
 
-    private String fullName(){
+    public String fullName(){
         return firstName + " " + lastName;
     }
 }
